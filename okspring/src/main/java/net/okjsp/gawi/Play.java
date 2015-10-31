@@ -1,6 +1,5 @@
 package net.okjsp.gawi;
 
-
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -8,7 +7,7 @@ import java.util.Scanner;
 
 public class Play {
 
-	public String[] items = { "가위", "바위", "보" };
+	public static String[] items = { "가위", "바위", "보" };
 	private List<Game> list;
 	DataAccessObject dao = new DataAccessObject();
 	Stat stat = new Stat();
@@ -47,8 +46,7 @@ public class Play {
 
 		int computerChoice = getComputerChoice();
 
-		System.out.println("----\n" + "당신: " + items[choice] + "\n컴퓨터: "
-				+ items[computerChoice]);
+		System.out.println("----\n" + "당신: " + items[choice] + "\n컴퓨터: " + items[computerChoice]);
 
 		String judgement = judge(choice, computerChoice);
 
@@ -75,7 +73,7 @@ public class Play {
 		System.out.println(stat.getWin() + "승 " + stat.getEven() + "무 " + stat.getLose() + "패");
 		System.out.println("승률: " + stat.getRate() + "%");
 	}
-	
+
 	public Stat getStat() {
 		return stat;
 	}
@@ -105,5 +103,5 @@ public class Play {
 		}
 		return judgement;
 	}
-	
+
 }
