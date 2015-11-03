@@ -1,9 +1,8 @@
-package net.okjsp.gawi;
-
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import net.okjsp.gawi.Play;
 
 public class PlayTest {
 
